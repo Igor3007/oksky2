@@ -1,0 +1,40 @@
+-
+    const delivery = [
+        {
+            icon: '/img/common/d1.png',
+            title: 'Самовывоз',
+            desc: '<span>Адрес производства: Калужская область, г. Обнинск, <br> </span><span>Коммунальный проезд, 23</span>',
+        },
+        {
+            icon: '/img/common/d2.png',
+            title: 'Условия',
+            desc: 'Оптовые цены действуют от 10 тыс. рублей. Оперативная отгрузка. <br> При заказе фасованной продукции (стекло/ПЭТ) от 60000 рублей доставка по России бесплатно.',
+        },
+        {
+            icon: '/img/common/d3.png',
+            title: 'Доставка по РФ',
+            desc: 'Стоимость доставки - по тарифам транспортных компаний: Деловые Линии, СДЭК, КИТ, ПЭК и др. <br> Транспортная компания выбирается по согласованию с менеджером. <br> Доставка осуществляется с нашего склада по согласованию с менеджером.',
+        },
+        
+    ]
+
+
+
+
+
+
+mixin card-imagemax(data)
+    .card-imagemax
+        .card-imagemax__icon: +bgimage(data.icon)
+        .card-imagemax__main
+            .card-imagemax__title= data.title
+            .card-imagemax__desc!= data.desc
+
+mixin delivery-block
+    section.section-delivery-block
+        .container
+            .delivery-block 
+                .delivery-block__title.font-h2 Доставка и оплата
+                .delivery-block__list
+                    each item in delivery
+                        .delivery-block__item: +card-imagemax(item)

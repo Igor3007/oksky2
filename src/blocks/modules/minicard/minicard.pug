@@ -1,0 +1,21 @@
+mixin minicard(data)
+    .minicard
+        .minicard__image
+            a(href='#'): +picture(data.image)
+        .minicard__title: a(href='#') МЕД НАТУРАЛЬНЫЙ ЛЕСНОЙ 350Г (2023)
+        .minicard__props
+            ul
+                li
+                    span Артикул:
+                    | 10107350
+                li
+                    span Категория:
+                    | Фасованный мёд
+        .minicard__price
+            .minicard__price-current 400 руб
+            .minicard__price-old 600 руб
+        .minicard__action
+            .minicard__towb
+                a(href='#'): button.btn.btn-small Купить на wildberries
+            .minicard__shop
+                a(href='#'): button.btn.btn-small.btn-line Заказать оптом

@@ -1,0 +1,43 @@
+-
+    const adv = [
+        {
+            icon: '/img/common/icons/a.svg',
+            title: 'Надежность',
+            desc: 'проверяем каждую емкость с медом',
+        },
+        {
+            icon: '/img/common/icons/a.svg',
+            title: 'Ответственность',
+            desc: 'самостоятельно проводим пыльцевой анализ и определяем процентное содержание пыльцы для монофлерных медов',
+        },
+        {
+            icon: '/img/common/icons/a.svg',
+            title: 'Стабильность',
+            desc: 'собственное оборудование: лаборатория, линия фасовки и упаковки, линия по изготовлению вощины и столярная мастерская',
+        },
+        {
+            icon: '/img/common/icons/a.svg',
+            title: 'Доступность',
+            desc: 'свой склад меда недалеко от Москвы с отличной транспортной доступностью',
+        },
+    ]
+
+
+
+
+
+mixin card-icon(data)
+    .card-icon
+        .card-icon__icon: +bgimage(data.icon)
+        .card-icon__main
+            .card-icon__title= data.title
+            .card-icon__desc= data.desc
+
+mixin advantages-block
+    section.section-advantages-block
+        .container
+            .advantages-block 
+                .advantages-block__title.font-h2 Почему OKSKY?
+                .advantages-block__list
+                    each item in adv
+                        .advantages-block__item: +card-icon(item)

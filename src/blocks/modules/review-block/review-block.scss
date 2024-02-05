@@ -1,0 +1,82 @@
+.section-review-block {
+    @include section-padding;
+    background-color: #f7f3f0;
+}
+
+.review-block {
+    &__title {
+        padding-bottom: 40px;
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -10px;
+    }
+
+    &__item {
+        width: 100%;
+        padding: 10px;
+
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        @media screen and (min-width: $w760) {
+            width: 50%;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    }
+}
+
+
+.card-image {
+    display: flex;
+
+    &__icon {
+
+        display: flex;
+        justify-content: center;
+        padding-bottom: 25px;
+        transition: 0.3s ease;
+
+        & .bgimage {
+            width: 55px;
+            height: 55px;
+            min-width: 55px;
+            background-color: #eee;
+            border-radius: 50%;
+            @include bgimage-cover;
+
+            @media screen and (min-width: $w992) {
+                width: 100px;
+                height: 100px;
+                min-width: 100px;
+            }
+        }
+    }
+
+    &__main {
+        padding-left: 32px;
+    }
+
+    &__title {
+        font-size: 16px;
+        line-height: 1.35;
+        font-weight: 600;
+
+    }
+
+    &__desc {
+        font-size: 15px;
+        line-height: 1.55;
+        font-weight: 300;
+        padding-bottom: 1.5em;
+        position: relative;
+
+
+
+
+    }
+}

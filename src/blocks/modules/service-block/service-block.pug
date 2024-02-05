@@ -1,0 +1,55 @@
+ 
+
+
+
+
+-
+    const services = [
+        {
+            icon: '/img/services/1.png',
+            title: 'OKSKY МЕД',
+            desc: 'Натуральный мед в стильной упаковке оптом и в розницу.',
+        },
+        {
+            icon: '/img/services/2.png',
+            title: 'OKSKY ПЧЕЛЫ',
+            desc: 'Пчелы и пчелиные матки с наших пасек. Доставка по всей стране.',
+        },
+        {
+            icon: '/img/services/3.png',
+            title: 'OKSKY ПРОДУКТ',
+            desc: 'Крем-мед с лечебными продуктами, а также ягодами, фруктами, орехами и травами.',
+        },
+        {
+            icon: '/img/services/4.png',
+            title: 'OKSKY ВОСК',
+            desc: 'Продаем свою вощину, а также оказываем услугу перетопки воска.',
+        },
+        {
+            icon: '/img/services/5.png',
+            title: 'OKSKY УЛЕЙ',
+            desc: 'Изготавливаем ульи различных типов в своей столярной мастерской из экологически чистых материалов.',
+        },
+        {
+            icon: '/img/services/6.png',
+            title: 'УСЛУГИ ФАСОВКИ',
+            desc: 'Фасуем продукты под ваш бренд на фирменном современном оборудовании. ',
+        },
+    ]
+
+mixin item-services(data)
+    .item-services
+        .item-services__icon: +bgimage(data.icon)
+        .item-services__title: a(href='#')= data.title
+        .item-services__desc
+            span= data.desc
+
+mixin service-block
+    section.section-service-block
+        .container
+            .service-block
+                 .service-block__title.font-h2 Наши услуги
+                 .service-block__list
+                    each item in services
+                        .service-block__item: +item-services(item)
+

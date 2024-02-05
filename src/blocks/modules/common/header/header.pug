@@ -1,0 +1,28 @@
+.header
+    .container
+        .header__leftbar
+            .header__menu
+                ul
+                    li: a(href='#') О нас
+                    li: a(href='#') Мед
+                    li.isset-sub
+                        a(href='#') Пчелы
+                        ul.sub-menu
+                            li: a(href='#') Пчеломатки
+                            li: a(href='#') Пчелопакеты
+                    li: a(href='#') Продукт
+                    li: a(href='#') Воск
+        .header__logo
+            a(href='#'): +bgimage('/img/common/logo.svg')
+        .header__rightbar
+            .header__menu
+                ul
+                    li: a(href='#') Улей  
+                    li: a(href='#') Фасовка
+                    li: a(href='#') Доставка
+            .header__msgr
+                ul
+                    li: a(href='#' class="ic_vb"): +icons('#ic_vb')
+                    li: a(href='#' class="ic_wa"): +icons('#ic_wa')
+            .header__lang
+                a(href='#') EN

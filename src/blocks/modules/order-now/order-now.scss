@@ -1,0 +1,44 @@
+.section-order-now {
+    @include section-padding;
+
+}
+
+.order-now {
+    &__title {
+        font-size: 24px !important;
+        text-transform: uppercase;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    &__desc {
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    &__form {
+        max-width: 760px;
+        margin: 0 auto;
+
+        & .form {
+            &__submit {
+                display: flex;
+                justify-content: center;
+                padding-bottom: 24px;
+
+                & .btn {
+
+                    width: 100%;
+
+                    @media screen and (min-width: $w760) {
+                        max-width: 320px
+                    }
+                }
+            }
+
+            &__note {
+                text-align: center;
+            }
+        }
+    }
+}

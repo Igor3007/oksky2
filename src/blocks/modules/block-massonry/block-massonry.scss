@@ -1,0 +1,101 @@
+.section-block-massonry {
+    @include section-padding;
+    background-color: #f7f3f0;
+}
+
+.block-massonry {
+    &__title {
+        padding-bottom: 40px;
+        text-align: center;
+
+        @media screen and (min-width: $w1024) {
+            padding-bottom: 80px;
+        }
+    }
+
+    &__item {
+        @media screen and (min-width: $w760) {
+            display: flex;
+
+            &:nth-child(even) {
+                & .card-tile {
+                    flex-direction: row-reverse;
+                }
+            }
+        }
+    }
+
+    &__subitem {
+        @media screen and (min-width: $w760) {
+            display: flex;
+            width: 50%;
+        }
+    }
+}
+
+
+.card-tile {
+
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 12px;
+
+    @media screen and (min-width: $w760) {
+        margin-bottom: 0;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    &__image {
+        overflow: hidden;
+
+        @media screen and (min-width: $w760) {
+            width: 50%;
+        }
+
+        &:hover {
+            & .bgimage {
+                transform: scale(1.05);
+            }
+        }
+
+        & .bgimage {
+            padding-top: 100%;
+            @include bgimage-cover;
+            transition: 0.3s ease;
+            cursor: pointer;
+        }
+    }
+
+    &__text {
+        background: #fff;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media screen and (min-width: $w760) {
+            width: 50%;
+        }
+
+
+        & strong {
+            font-weight: 600;
+            margin-bottom: 0.3em;
+        }
+
+        & h3 {
+            padding-bottom: 0.5em;
+        }
+
+        & ul {
+            padding-left: 12px;
+            margin-top: 5px;
+
+            & li {
+                list-style-type: disc;
+
+            }
+        }
+    }
+}

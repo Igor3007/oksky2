@@ -1,0 +1,40 @@
+extends layouts/main
+ 
+block variables
+  include ../data/data.pug
+  - const title = "oksky"
+ 
+
+block main
+  include ../blocks/modules/banner-block/banner-block
+  include ../blocks/modules/about-block/about-block
+  include ../blocks/modules/service-block/service-block
+  include ../blocks/modules/order-block/order-block
+  include ../blocks/modules/advantages-block/advantages-block
+  include ../blocks/modules/review-block/review-block
+  include ../blocks/modules/form-block/form-block
+  include ../blocks/modules/delivery-block/delivery-block
+  include ../blocks/modules/catalog-category/catalog-category
+  include ../blocks/modules/block-massonry/block-massonry
+  include ../blocks/modules/order-now/order-now
+  include ../blocks/modules/first-block/first-block
+
+  +first-block 
+  +banner-block
+  +about-block
+  +service-block
+  +order-block
+  +advantages-block
+  +review-block
+  +form-block
+  +delivery-block
+  +catalog-category
+  
+  +block-massonry
+  +order-now
+
+   
+ 
+block scripts
+  script(src="/js/vendor.js") 
+  script(src="/js/common.js") 

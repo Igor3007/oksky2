@@ -1,0 +1,42 @@
+include ../../modules/minicard/minicard.pug
+
+-
+    const product = [
+        {
+            image: '/img/product/1',
+            title: 'Самовывоз',
+        },
+        {
+            image: '/img/product/2',
+            title: 'Самовывоз',
+        },
+        {
+            image: '/img/product/3',
+            title: 'Самовывоз',
+        },
+        {
+            image: '/img/product/4',
+            title: 'Самовывоз',
+        },
+        {
+            image: '/img/product/5',
+            title: 'Самовывоз',
+        },
+        {
+            image: '/img/product/6',
+            title: 'Самовывоз',
+        },
+     
+        
+    ]
+
+ 
+
+mixin catalog-category
+    section.section-catalog-category
+        .container
+            .catalog-category 
+                .catalog-category__title.font-h2 Мед фасованный
+                .catalog-category__list
+                    each item in product
+                        .catalog-category__item: +minicard(item)

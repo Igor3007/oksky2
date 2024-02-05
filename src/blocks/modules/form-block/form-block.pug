@@ -1,0 +1,18 @@
+ 
+mixin form-block
+    section.section-form-block
+        .form-block
+            .form-block__bg
+                +picturePng('/img/common/bg')
+            .form-block__content
+                .container
+                    .form-block__title Заказать звонок
+                    .form-block__subtitle Оставьте свои данные и мы вам обязательно перезвоним!
+                    .form-block__form
+                        form(action='#' method='POST')
+                            .form
+                              .form__item
+                                .form__subitem: input(type="text" placeholder="Имя")
+                                .form__subitem: input(type="tel" placeholder="Номер телефона")
+                                .form__subitem.form__subitem--w-auto
+                                    button.btn Отправить

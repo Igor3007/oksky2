@@ -1,0 +1,90 @@
+.section-about-block {
+    @include section-padding;
+}
+
+.about-block {
+
+    &__row {
+        @media screen and (min-width: $w992) {
+            display: flex;
+        }
+    }
+
+    &__left {
+
+        font-size: 18px;
+        line-height: 155%;
+        font-weight: 300;
+        padding-bottom: 30px;
+
+        @media screen and (min-width: $w992) {
+            font-size: 20px;
+            padding-bottom: 0;
+
+        }
+
+
+        @media screen and (min-width: $w992) {
+            width: 50%;
+        }
+    }
+
+    &__right {
+        @media screen and (min-width: $w992) {
+            width: 50%;
+            padding-left: 60px;
+        }
+    }
+
+    &__btn {
+        padding-top: 30px;
+
+        & .btn {
+            text-transform: none;
+            font-size: 16px;
+            width: 100%;
+
+            @media screen and (min-width: $w480) {
+                width: auto;
+            }
+
+            @media screen and (min-width: $w992) {
+                padding-left: 3em;
+                padding-right: 3em;
+            }
+        }
+    }
+
+    &__title {
+        padding-bottom: 10px;
+    }
+}
+
+.two-column-gallery {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: -10px;
+
+    & li {
+        width: 50%;
+        padding: 10px;
+
+        &:hover {
+            & img {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    & picture {
+        @include picture(100%, cover);
+        overflow: hidden;
+
+
+    }
+
+    & img {
+        transition: 0.3s ease;
+    }
+}

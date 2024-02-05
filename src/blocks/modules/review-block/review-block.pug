@@ -1,0 +1,43 @@
+-
+    const review = [
+        {
+            icon: '/img/review/1.jpg',
+            title: 'Оперативная доставка',
+            desc: 'Все, начала сеять! Благодарю за помощь по подсадке и оперативную отправку.',
+        },
+        {
+            icon: '/img/review/2.jpg',
+            title: 'Сохранность пчел',
+            desc: 'Добрый день! Отправление получил, все нормально, приятно было с вами работать, спасибо.',
+        },
+        {
+            icon: '/img/review/3.jpg',
+            title: 'Качественный мед',
+            desc: 'Получила), спасибо. Настоящий. Я правда одну баночку пробывала. Тест: налить не кого воды на мед в миску и поводить, мед структурируется в соты)',
+        },
+        {
+            icon: '/img/review/4.jpg',
+            title: 'Хороший прием пчелиных маток',
+            desc: 'Марина, доброе утро. Спасибо, признали Вашу карпатку пчелы.',
+        },
+    ]
+
+
+ 
+
+mixin card-image(data)
+    .card-image
+        .card-image__icon: +bgimage(data.icon)
+        .card-image__main
+            .card-image__desc= data.desc
+            .card-image__title= data.title
+
+
+mixin review-block
+    section.section-review-block
+        .container
+            .review-block 
+                .review-block__title.font-h2 Отзывы наших клиентов
+                .review-block__list
+                    each item in review
+                        .review-block__item: +card-image(item)

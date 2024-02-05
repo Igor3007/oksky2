@@ -1,0 +1,23 @@
+mixin card-tile(data)
+    .card-tile
+        .card-tile__text
+            h3 Карпатка F1 (Украина)
+            strong Стабильная яйценоскость и миролюбие:
+            ul
+                li обсиживает рамки при осмотре
+                li адаптирована к долгой зимовке
+                li имеет длинный хоботок
+        .card-tile__image: +bgimage(data.image)
+
+mixin block-massonry
+    section.section-block-massonry
+        .container
+            .block-massonry
+                .block-massonry__title.font-h2 Мы предлагаем плодных маток трех пород:
+                .block-massonry__list
+                    .block-massonry__item
+                        .block-massonry__subitem: +card-tile({image: '/img/common/t1.jpg'})
+                        .block-massonry__subitem: +card-tile({image: '/img/common/t2.jpg'})
+                    .block-massonry__item
+                        .block-massonry__subitem: +card-tile({image: '/img/common/t3.jpg'})
+                        .block-massonry__subitem: +card-tile({image: '/img/common/t4.jpg'})

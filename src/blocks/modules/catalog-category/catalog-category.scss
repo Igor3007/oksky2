@@ -1,0 +1,48 @@
+.section-catalog-category {
+    @include section-padding;
+    background-color: #f7f3f0;
+}
+
+
+.catalog-category {
+    &__title {
+        padding-bottom: 40px;
+        text-align: center;
+        font-weight: 300 !important;
+
+        @media screen and (min-width: $w760) {
+            padding-bottom: 60px;
+        }
+
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -4px;
+
+        @media screen and (min-width: $w576) {
+            margin: -12px;
+        }
+    }
+
+    &__item {
+        width: 100%;
+        padding: 4px;
+
+        @media screen and (min-width: $w576) {
+            padding: 12px;
+        }
+
+
+        @media screen and (min-width: $w360) {
+            width: 50%;
+        }
+
+        @media screen and (min-width: $w992) {
+            width: 33.33%;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+    }
+}

@@ -1,0 +1,109 @@
+.banner-block {
+    position: relative;
+
+    &__bg {
+        @include layer(1);
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        min-height: 100vh;
+        position: relative;
+        z-index: 2;
+
+        background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7));
+        color: #fff;
+
+        display: flex;
+        align-items: center;
+
+
+
+        & .container {
+
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        & h1 {
+            font-size: 55px;
+            text-align: center;
+            font-weight: 600;
+
+
+            @media screen and (min-width: $w1200) {
+                font-size: 65px;
+
+            }
+
+            @media screen and (min-width: $w1440) {
+                font-size: 72px;
+            }
+        }
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        text-align: center;
+        line-height: 150%;
+        padding-bottom: 2.5em;
+        max-width: 1000px;
+        letter-spacing: 1px;
+
+        @media screen and (min-width: $w1200) {
+            font-size: 20px;
+            line-height: 160%;
+            font-weight: 300;
+        }
+
+        @media screen and (min-width: $w1440) {
+            line-height: 155%;
+            font-weight: 300;
+            font-size: 22px;
+        }
+    }
+
+    &__btn {
+        & .btn {
+            min-width: 180px;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        bottom: 50px;
+        animation: t-arrow-bottom 1.7s infinite ease;
+    }
+
+}
+
+@keyframes t-arrow-bottom {
+
+    0%,
+    to {
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0)
+    }
+
+    50%,
+    55% {
+        -moz-transform: translateY(-7px);
+        -ms-transform: translateY(-7px);
+        -webkit-transform: translateY(-7px);
+        -o-transform: translateY(-7px);
+        transform: translateY(-7px)
+    }
+}

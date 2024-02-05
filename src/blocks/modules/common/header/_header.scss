@@ -1,0 +1,127 @@
+header {
+    height: 80px;
+    background-color: #f7f3f0;
+}
+
+.header {
+
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: #f7f3f0;
+
+    &--white {
+        background-color: white;
+    }
+
+    & .container {
+        max-width: 1360px;
+        display: flex;
+        padding: 15px 0;
+    }
+
+    &__menu {
+        & ul {
+            display: flex;
+            align-items: center;
+            margin: 0 -16px;
+
+            &.sub-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+
+                & ul {
+                    display: block;
+                }
+            }
+
+            & li {
+                padding: 0 16px;
+                font-size: 17px;
+                font-weight: 500;
+
+                & a {
+                    font-size: inherit;
+
+                    &:hover {
+                        color: var(--main);
+                    }
+                }
+
+                &.isset-sub {
+
+                    position: relative;
+
+                    &:hover {
+                        & .sub-menu {
+                            display: block;
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+
+
+
+    &__logo {
+        width: 100px;
+
+        & .bgimage {
+            width: 100px;
+            height: 50px;
+            @include bgimage-contain;
+        }
+    }
+
+    &__rightbar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    &__leftbar {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__msgr {
+
+        padding: 0 16px;
+
+        & ul {
+            display: flex;
+            align-items: center;
+
+            & li {
+                padding: 0 6px;
+
+                & .ic_vb {
+                    & svg {
+                        fill: rgb(131, 19, 196);
+                    }
+                }
+
+                & .ic_wa {
+                    & svg {
+                        fill: rgb(0, 173, 38);
+                    }
+                }
+            }
+        }
+    }
+
+    &__lang {
+        font-weight: 600;
+
+
+    }
+}

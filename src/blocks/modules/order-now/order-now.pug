@@ -1,0 +1,28 @@
+mixin order-now
+    section.section-order-now
+        .container
+            .order-now__title.font-h3 ЗАКАЗАТЬ ПЧЕЛ СЕБЕ ПРЯМО СЕЙЧАС вы можете заполнив форму ниже
+            .order-now__desc Внимательно заполните форму и мы перезвоним вам для уточнения заказа
+            .order-now__form
+                form(action='#' method='POST')
+                    .form
+                      .form__label E-mail (необязательно) 
+                      .form__item.form__subitem: input(type="text" placeholder="E-mail")
+                      .form__label ФИО
+                      .form__item.form__subitem: input(type="text" placeholder="Как нам можно к вам обращаться?")
+                      .form__label Мобильный номер
+                      .form__item.form__subitem: input(type="tel" placeholder="+7(999)999-99-99")
+                      .form__label Каких маток вы хотите заказать?
+                      .form__item.form__subitem
+                       ul
+                        li: +checkbox('Бакфаст')
+                        li: +checkbox('Карника')
+                        li: +checkbox('Карпатка')
+                        li: +checkbox('Другая порода, которой нет у нас на сайте')
+                      .form__label Укажите точно количество маток, необходимое вам
+                      .form__item.form__subitem: input(type="number" placeholder="5" style="max-width: 100px;")
+                      .form__label Ваш адрес
+                      .form__item.form__subitem: input(type="tel" placeholder="Ваш адрес")
+                      .form__submit
+                        button.btn(type="submit") Отправить
+                      .form__note Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c политикой конфиденциальности
