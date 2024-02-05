@@ -11,15 +11,27 @@ header {
     top: 0;
     right: 0;
     background-color: #f7f3f0;
-
-    &--white {
-        background-color: white;
-    }
+    transition: 0.7s ease;
+    border-bottom: 1px solid transparent;
 
     & .container {
         max-width: 1360px;
         display: flex;
-        padding: 15px 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        @media screen and (min-width: $w992) {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
+
+    &__burger {
+        margin-right: 7px;
+
+        @media screen and (min-width: $w992) {
+            display: none;
+        }
     }
 
     &__menu {
@@ -31,12 +43,25 @@ header {
             &.sub-menu {
                 display: none;
                 position: absolute;
-                top: 100%;
+                top: calc(100%);
                 left: 0;
+                padding-top: 15px;
 
-                & ul {
-                    display: block;
+                & li {
+                    & a {
+                        padding: 8px 16px;
+                        background-color: #fff;
+                        display: block;
+                        border-bottom: 1px solid rgba(243, 229, 191, 0.76);
+                    }
+
+                    &:last-child {
+                        & a {
+                            border-bottom: none;
+                        }
+                    }
                 }
+
             }
 
             & li {
@@ -53,10 +78,29 @@ header {
                 }
 
                 &.isset-sub {
-
                     position: relative;
 
+                    &>a {
+                        &::after {
+                            width: 12px;
+                            height: 12px;
+                            display: inline-block;
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            content: '';
+                            margin-left: 10px;
+                            margin-right: -10px;
+                            transition: 0.3s ease;
+                            background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMSAxbDYgNiA2LTYiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L3N2Zz4=);
+                        }
+                    }
+
                     &:hover {
+                        &>a::after {
+                            transform: rotate(180deg);
+                        }
+
                         & .sub-menu {
                             display: block;
                         }
@@ -68,15 +112,23 @@ header {
         }
     }
 
-
-
     &__logo {
         width: 100px;
+        display: flex;
+        align-items: center;
 
         & .bgimage {
             width: 100px;
-            height: 50px;
+            height: 40px;
             @include bgimage-contain;
+            background-position-x: left;
+
+            @media screen and (min-width: $w992) {
+                width: 100px;
+                height: 50px;
+
+                background-position-x: center;
+            }
         }
     }
 
@@ -85,12 +137,32 @@ header {
         align-items: center;
         justify-content: flex-end;
         width: 100%;
+
+        & .header__menu {
+            display: none;
+
+            @media screen and (min-width: $w576) {
+                display: block;
+            }
+        }
     }
 
     &__leftbar {
         display: flex;
         align-items: center;
-        width: 100%;
+        width: auto;
+
+        @media screen and (min-width: $w992) {
+            width: 100%;
+        }
+
+        & .header__menu {
+            display: none;
+
+            @media screen and (min-width: $w992) {
+                display: block;
+            }
+        }
     }
 
     &__msgr {
@@ -103,6 +175,7 @@ header {
 
             & li {
                 padding: 0 6px;
+                height: 25px;
 
                 & .ic_vb {
                     & svg {
@@ -121,7 +194,16 @@ header {
 
     &__lang {
         font-weight: 600;
+    }
 
+    &--white {
+        background-color: white;
+        border-bottom: 1px solid #f7f3f0;
 
+        & .sub-menu {
+            & li {
+                & a {}
+            }
+        }
     }
 }

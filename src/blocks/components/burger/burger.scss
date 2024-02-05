@@ -2,15 +2,15 @@
 
 $scale: 1;
 
-$burger_w: rem(34/$scale);
-$burger_h: rem(34/$scale);
-$line_w: rem(17/$scale);
+$burger_w: rem(50/$scale);
+$burger_h: rem(50/$scale);
+$line_w: rem(24/$scale);
 $line_h: rem(2);
 $line_mrg_1: rem(-(8/$scale));
 $line_mrg_2: rem(-(2/$scale));
 $line_mrg_3: rem((4/$scale));
 $line_offset: rem((6/$scale));
-$left: rem(8/$scale);
+$left: rem(12/$scale);
 
 .btn-burger {
     position: relative;
@@ -56,7 +56,7 @@ $left: rem(8/$scale);
         top: 50%;
         width: $line_w;
         height: $line_h;
-        background: #fff;
+        background: #000;
         -webkit-transform: translateZ(0);
         transform: translateZ(0);
     }
