@@ -1,0 +1,74 @@
+.footer {
+    background-size: 100% auto;
+    background-position: bottom;
+    background-color: #d3a863;
+    padding: 50px 0;
+    position: relative;
+    background-repeat: no-repeat;
+
+    &__logo {
+
+        padding-bottom: 100px;
+
+        & .bgimage {
+            width: 170px;
+            height: 170px;
+            @include bgimage-contain;
+            position: absolute;
+            left: 50%;
+            margin-left: -85px;
+            top: 0;
+            margin-top: -30px;
+            background-color: #d3a863;
+            border-radius: 50%;
+            background-size: 100px auto;
+
+        }
+    }
+
+    &__col {
+        text-align: center;
+        padding-bottom: 30px;
+        font-size: 16px;
+
+        @media screen and (min-width: $w992) {
+
+
+            padding-right: 10%;
+
+        }
+    }
+
+    &__row {
+
+        padding-bottom: 50px;
+
+        @media screen and (min-width: $w992) {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: bold;
+        padding-bottom: 10px;
+
+    }
+
+    &__bottom {
+        text-align: center;
+    }
+
+    &__list {
+        & li {
+            padding: 5px 0;
+
+            & a {
+                text-decoration: underline;
+                color: #222;
+            }
+        }
+    }
+}

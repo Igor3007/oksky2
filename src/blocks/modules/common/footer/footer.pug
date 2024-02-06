@@ -1,6 +1,38 @@
 include ../../common/main-menu/main-menu.pug
 
-.footer
-    .container: center footer
+.footer.lazyload(data-bg="/img/common/Footer-default-png5.png")
+    .container
+        .footer__logo: +bgimage('/img/common/logo.svg')
+        .footer__main
+            .footer__row
+                .footer__col
+                    .footer__title Контакты
+                    .footer__list
+                        ul  
+                            li: a(href='https://yandex.ru/maps/967/obninsk/house/kommunalny_proyezd_23/Z08YcARoTEEEQFtvfX1wc39jbQ==/?ll=36.638544%2C55.112309&z=17') Адрес производства: г. Обнинск, <br> Коммунальный проезд, 23
+                            li: a(href='#') +7 (965) 705-27-22
+                            li: a(href='#') daniil.s@oksky-med.ru
+                .footer__col
+                        .footer__title Быстрый переход
+                        .footer__list
+                            ul  
+                                li: a(href='#') О нас
+                                li: a(href='#') Мед
+                                li: a(href='#') Пчелы
+                                li: a(href='#') Продукт
+                                li: a(href='#') Воск
+                .footer__col
+                        .footer__title Информация
+                        .footer__list
+                            ul  
+                                li: a(href='#') Улей
+                                li: a(href='#') Фасовка
+                                li: a(href='#') Доставка
+                         
+                           
+                               
+                             
+        .footer__bottom © Oksky 2024 Все права защищены
+        
 
 +main-menu()

@@ -1,0 +1,43 @@
+.section-text-block {
+    @include section-padding;
+    background-color: #f7f3f0;
+}
+
+.text-block {
+    font-size: 17px;
+
+    &__wrp {
+        @media screen and (min-width: $w992) {
+            display: flex;
+        }
+    }
+
+    &__main {
+
+        @media screen and (min-width: $w992) {
+            width: calc(100% - 360px);
+            padding-right: 60px;
+        }
+
+    }
+
+    &__aside {
+
+        @media screen and (min-width: $w992) {
+            width: 360px;
+        }
+
+        & .formated-text {
+            padding: 24px;
+            background-color: #fff;
+
+            @media screen and (min-width: $w992) {
+                padding: 30px;
+            }
+
+            & a {
+                font-weight: bold;
+            }
+        }
+    }
+}
